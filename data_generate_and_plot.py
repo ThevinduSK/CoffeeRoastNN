@@ -54,12 +54,10 @@ def plt_roast(X,Y):
     plt.show()
 
 def plt_prob(ax,fwb):
-    """ plots a decision boundary but include shading to indicate the probability """
-    #setup useful ranges and common linspaces
     x0_space  = np.linspace(150, 285 , 40)
     x1_space  = np.linspace(11.5, 15.5 , 40)
 
-    # get probability for x0,x1 ranges
+
     tmp_x0,tmp_x1 = np.meshgrid(x0_space,x1_space)
     z = np.zeros_like(tmp_x0)
     for i in range(tmp_x0.shape[0]):
